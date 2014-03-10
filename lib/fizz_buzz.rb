@@ -12,6 +12,11 @@ class FizzBuzz
       if num % 3 == 0
         numbers[i] = "Fizz"
       end
+
+      if num % 5 == 0
+        numbers[i] = "Buzz"
+      end
+
       i += 1
     end
 
