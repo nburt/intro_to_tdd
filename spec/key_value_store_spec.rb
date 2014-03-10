@@ -8,7 +8,7 @@ describe KeyValueStore do
 
     expected = {1 => "one"}
 
-    expect(key_value_store.storify).to eq expected
+    expect(key_value_store.add).to eq expected
   end
 end
 

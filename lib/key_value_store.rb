@@ -1,14 +1,13 @@
-
 class KeyValueStore
   def initialize(key, value)
     @key = key
     @value = value
+    @hash_store = Hash.new
   end
 
-  def storify
-    hash_store = Hash.new
-    hash_store[@key] = @value
+  def add
+    @hash_store[@key] = @value
 
-    hash_store
+    @hash_store
   end
 end
