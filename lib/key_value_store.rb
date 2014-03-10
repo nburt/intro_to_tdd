@@ -16,4 +16,8 @@ class KeyValueStore
   def delete_key(key)
     @hash_store.delete(key)
   end
+  
+  def display_keys
+    @hash_store.keys
+  end
 end
