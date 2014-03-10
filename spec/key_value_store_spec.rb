@@ -4,16 +4,16 @@ require 'key_value_store'
 
 describe KeyValueStore do
   it "allows a user to add a value stored under a key" do
-    key_value_store = KeyValueStore.new(1, "one")
+    key_value_store = KeyValueStore.new()
 
     expected = {1 => "one"}
 
-    expect(key_value_store.add).to eq expected
+    expect(key_value_store.add(1, "one")).to eq expected
   end
 
   it "allows a user to get the value for a key" do
-    key_value_store = KeyValueStore.new(1, "one")
-    key_value_store.add
+    key_value_store = KeyValueStore.new()
+    key_value_store.add(1, "one")
 
     expected = "one"
 
