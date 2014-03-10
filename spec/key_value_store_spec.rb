@@ -4,7 +4,7 @@ require 'key_value_store'
 
 describe KeyValueStore do
   it "allows a user to add a value stored under a key" do
-    key_value_store = KeyValueStore.new()
+    key_value_store = KeyValueStore.new
 
     expected = {1 => "one"}
 
@@ -12,12 +12,23 @@ describe KeyValueStore do
   end
 
   it "allows a user to get the value for a key" do
-    key_value_store = KeyValueStore.new()
+    key_value_store = KeyValueStore.new
     key_value_store.add(1, "one")
 
     expected = "one"
 
     expect(key_value_store.get_value(1)).to eq expected
+  end
+
+  it "allows a user to delete a key, getting the key will then return nil" do
+    key_value_store = KeyValueStore.new
+    key_value_store.add(1, "one")
+    key_value_store.delete_key(1)
+
+    expected = nil
+
+    expect(key_value_store.get_value(1)).to eq expected
+
   end
 end
 
