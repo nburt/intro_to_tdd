@@ -10,6 +10,15 @@ describe KeyValueStore do
 
     expect(key_value_store.add).to eq expected
   end
+
+  it "allows a user to get the value for a key" do
+    key_value_store = KeyValueStore.new(1, "one")
+    key_value_store.add
+
+    expected = "one"
+
+    expect(key_value_store.get_value(1)).to eq expected
+  end
 end
 
 
