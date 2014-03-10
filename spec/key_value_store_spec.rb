@@ -40,6 +40,16 @@ describe KeyValueStore do
 
     expect(key_value_store.display_keys). to eq expected
   end
+
+  it "clears the store of all their keys and values" do
+    key_value_store = KeyValueStore.new
+    key_value_store.add(1, "one")
+    key_value_store.add(2, "two")
+
+    expected = {}
+
+    expect(key_value_store.clear_store).to eq expected
+  end
 end
 
 
