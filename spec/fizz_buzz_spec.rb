@@ -3,12 +3,12 @@ require 'rspec/core'
 require 'fizz_buzz'
 
 describe FizzBuzz do
-  it "prints an array starting at 1 and ending in a number" do
-  fizz_buzz = FizzBuzz.new(5)
+  it "Replaces numbers in array with Fizz if they are divisible by 3" do
+    fizz_buzz = FizzBuzz.new(6)
 
-  expected = [1, 2, 3, 4, 5]
+    expected = [1, 2, "Fizz", 4, 5, "Fizz"]
 
-  expect(fizz_buzz.arrayify).to eq expected
+    expect(fizz_buzz.arrayify).to eq expected
   end
 end
 

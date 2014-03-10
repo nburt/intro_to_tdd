@@ -4,6 +4,17 @@ class FizzBuzz
   end
 
   def arrayify
-    1.upto(@number).to_a
+    numbers = 1.upto(@number).to_a
+
+    i = 0
+
+    numbers.each do |num|
+      if num % 3 == 0
+        numbers[i] = "Fizz"
+      end
+      i += 1
+    end
+
+    numbers
   end
 end
