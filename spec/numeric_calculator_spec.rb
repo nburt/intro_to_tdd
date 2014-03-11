@@ -17,6 +17,15 @@ describe NumericCalculator do
 
     expect(numeric_calculator.subtract(5, 2)).to eq expected
   end
+
+  it "saves a number to the calculator's memory that can be retrieved using the get method" do
+    numeric_calculator = NumericCalculator.new
+    numeric_calculator.save(5)
+
+    expected = 5
+
+    expect(numeric_calculator.get).to eq expected
+  end
 end
 
 
