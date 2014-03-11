@@ -4,6 +4,16 @@ class OddEven
   end
 
   def run
-    1.upto(@num).to_a
+    @array_of_nums = 1.upto(@num).to_a
+
+    i = 0
+
+    @array_of_nums.each do |number|
+      case
+        when number % 2 == 0
+          @array_of_nums[i] = "even"
+      end
+      i += 1
+    end
   end
 end
