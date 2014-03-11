@@ -2,7 +2,7 @@ require 'rspec/core'
 require 'numeric_calculator'
 
 describe NumericCalculator do
-  it "it takes two numbers, adds them, and returns the sum" do
+  it "takes two numbers, adds them, and returns the sum" do
     numeric_calculator = NumericCalculator.new
 
     expected = 3
