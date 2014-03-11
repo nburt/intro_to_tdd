@@ -26,6 +26,15 @@ describe NumericCalculator do
 
     expect(numeric_calculator.get).to eq expected
   end
+  it "clears the calculator's memory, get now returns 0" do
+    numeric_calculator = NumericCalculator.new
+    numeric_calculator.save(5)
+    numeric_calculator.clear
+
+    expected = 0
+
+    expect(numeric_calculator.get).to eq expected
+  end
 end
 
 
