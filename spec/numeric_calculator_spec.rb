@@ -9,6 +9,14 @@ describe NumericCalculator do
 
     expect(numeric_calculator.add(1, 2)).to eq expected
   end
+
+  it "takes two numbers and returns the difference of the two numbers" do
+    numeric_calculator = NumericCalculator.new
+
+    expected = 3
+
+    expect(numeric_calculator.subtract(5, 2)).to eq expected
+  end
 end
 
 
