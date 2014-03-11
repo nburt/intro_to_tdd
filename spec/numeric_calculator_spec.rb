@@ -35,6 +35,13 @@ describe NumericCalculator do
 
     expect(numeric_calculator.get).to eq expected
   end
+  it "initializes the calculator with a memory value of 0" do
+    numeric_calculator = NumericCalculator.new
+
+    expected = 0
+
+    expect(numeric_calculator.get).to eq expected
+  end
 end
 
 

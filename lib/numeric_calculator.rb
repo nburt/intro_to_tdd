@@ -1,4 +1,7 @@
 class NumericCalculator
+  def initialize
+    @saved_number = 0
+  end
   def add(x, y)
     sum = x + y
 
