@@ -9,6 +9,14 @@ describe LeapYearCalculator do
 
     expect(leap_year_calculator.yes?(1996)).to eq expected
   end
+
+  it "the year is not a leap year if it is not divisible by 4" do
+    leap_year_calculator = LeapYearCalculator.new
+
+    expected = false
+
+    expect(leap_year_calculator.yes?(1999)).to eq expected
+  end
 end
 
 
