@@ -3,15 +3,11 @@ class NumericCalculator
     @saved_number = 0
   end
   def add(x, y)
-    sum = x + y
-
-    sum
+    x + y
   end
 
   def subtract(x, y)
-    difference = x - y
-
-    difference
+    x - y
   end
 
   def save(num)
