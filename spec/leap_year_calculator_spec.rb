@@ -1,4 +1,4 @@
-require 'rspec/core'
+wrequire 'rspec/core'
 require 'leap_year_calculator'
 
 describe LeapYearCalculator do

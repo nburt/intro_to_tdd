@@ -9,6 +9,14 @@ describe StringCalculator do
 
     expect(string_calculator.add("")).to eq expected
   end
+
+  it "returns the sum of the numbers in the string if not 0" do
+    string_calculator = StringCalculator.new
+
+    expected = 10
+
+    expect(string_calculator.add("1, 2, 7")).to eq expected
+  end
 end
 
 
