@@ -12,6 +12,8 @@ class OddEven
       case
         when number % 2 == 0
           @array_of_nums[i] = "even"
+        when number % 2 == 1
+          @array_of_nums[i] = "odd"
       end
       i += 1
     end
