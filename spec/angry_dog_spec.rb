@@ -1,11 +1,15 @@
 require 'rspec/core'
+require 'rspec-expectations'
 require 'angry_dog'
 
 describe AngryDog do
   it "should growl if you poke the dog" do
     angry_dog = AngryDog.new
+    angry_dog.poke
+    angry_dog.poke
+    angry_dog.poke
 
-    expect(angry_dog.poke).to eq "Your dog warns you with a loud 'grrrr'"
+    expect(angry_dog.poke).to eq "WOOF!"
   end
 end
 
